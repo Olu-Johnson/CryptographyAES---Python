@@ -52,32 +52,3 @@ def decrypt_file(file_path, key_path):
 
 
 
-# Example usage
-
-if __name__ == "__main__":
-
-    # Generate a random AES key
-
-    key = generate_aes_key(16)  # 16 bytes for AES-128
-
-   
-
-    # The data to encrypt (must be bytes)
-
-    data = b"This is the content to encrypt and decrypt using AES."
-
-   
-
-    # Encrypt the data
-
-    encrypted_data = encrypt_data(data, key)
-
-    print(f"Encrypted data (hex): {encrypted_data.hex()}")
-
-   
-
-    # Decrypt the data
-
-    decrypted_data = decrypt_data(encrypted_data, key)
-
-    print(f"Decrypted data: {decrypted_data.decode('utf-8')}")
